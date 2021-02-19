@@ -22,7 +22,6 @@ namespace Shipping
                 }
                 Console.WriteLine("Plaese enter the weight of your shipment (in lbs) >>");
                 answer = Console.ReadLine();
-                //bool isSuccessfull = double.TryParse(Console.ReadLine(), out distance);
 
                 if (double.TryParse(answer, out weight) == false)
                 {
