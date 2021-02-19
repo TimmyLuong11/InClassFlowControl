@@ -14,23 +14,22 @@ namespace Shipping
                 Console.WriteLine("Plaese enter the # of mile>>");
                 answer = Console.ReadLine();
                 bool isSuccessfull = double.TryParse(answer, out distance);
-
                 if (isSuccessfull == false)
                 {
                     Console.WriteLine("Invalid input. Goodbye.");
                     Environment.Exit(-1);
                 }
+
                 Console.WriteLine("Plaese enter the weight of your shipment (in lbs) >>");
                 answer = Console.ReadLine();
-
                 if (double.TryParse(answer, out weight) == false)
                 {
                     Console.WriteLine("Invalid input. Goodbye.");
                     Environment.Exit(-1);
                 }
+
                 Console.WriteLine("Does your shipment contain hazordous maerials? Yes or No >>");
                 answer= Console.ReadLine();
-
                 quote = 0.55 * distance + 0.73 * weight;
                 if(answer.ToLower() == "yes")
                 {
