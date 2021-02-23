@@ -15,18 +15,18 @@ namespace CoinToss
 
             //Output to console to gather user information
             Console.WriteLine("Please pick heads or tails >>");
-            ans = Console.ReadLine();
+            ans = Console.ReadLine().ToLower();
 
             //Generating a random number between 1 and 2
             rand = new Random();
             randomNum = rand.Next(1,3); 
 
             //Assigning a value if the input is head or tails
-            if (ans.ToLower() == "heads")
+            if (ans == "heads")
             {
                 guess = 1;
             }
-            else if (ans.ToLower() == "tails")
+            else //if (ans.ToLower() == "tails")
             {
                 guess = 2;
             }
